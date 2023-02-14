@@ -8,8 +8,8 @@ In recent years, more and more people suffer from voice-related diseases. Given 
 #### MMF-SASEGAN Audio Samples
 ##### The audio loading may be slower and you need to wait patiently. If you cannot load audio, please contact us to provide original audio files. Our mail address is 20214239031@stu.suda.edu.cn.
 
-|              | Sample 1  | Sample 2  | Sample 3  | Sample 4  |
-|:------------:|:-------:|:-------:|:-------:|:-------:|
+|              | Sample 1  | Sample 2  |
+|:------------:|:-------:|:-------:|
 | **Noisy** |    <audio controls="controls">  <source type="audio/wav" src="https://raw.githubusercontent.com/SUDA-CMH/SUDA-CMH.github.io/main/wavs/1_1_original_pathological_speech.wav"></source> </audio>   |    <audio controls="controls">  <source type="audio/wav" src="https://raw.githubusercontent.com/SUDA-CMH/SUDA-CMH.github.io/main/wavs/2_1_original_pathological_speech.wav"></source> </audio>  |    <audio controls="controls">  <source type="audio/wav" src="https://raw.githubusercontent.com/SUDA-CMH/SUDA-CMH.github.io/main/wavs/3_1_original_pathological_speech.wav"></source> </audio>  |    <audio controls="controls">  <source type="audio/wav" src="https://raw.githubusercontent.com/SUDA-CMH/SUDA-CMH.github.io/main/wavs/4_1_original_pathological_speech.wav"></source> </audio>  |
 |      **Clean**     |     <audio controls="controls">  <source type="audio/wav" src="https://raw.githubusercontent.com/SUDA-CMH/SUDA-CMH.github.io/main/wavs/1_2_speech_converted_by_VAE.wav"></source> </audio>   |     <audio controls="controls">  <source type="audio/wav" src="https://raw.githubusercontent.com/SUDA-CMH/SUDA-CMH.github.io/main/wavs/2_2_speech_converted_by_VAE.wav"></source> </audio> |
 |    **SASEGAN-3**   |     <audio controls="controls">  <source type="audio/wav" src="https://raw.githubusercontent.com/SUDA-CMH/SUDA-CMH.github.io/main/wavs/1_3_speech_conveted_by_AutoVC.wav"></source> </audio>    |     <audio controls="controls">  <source type="audio/wav" src="https://raw.githubusercontent.com/SUDA-CMH/SUDA-CMH.github.io/main/wavs/2_3_speech_conveted_by_AutoVC.wav"></source> </audio>     |
