@@ -22,3 +22,6 @@ Since there are more and more speech-related applications and various noises exi
 |    **SASEGAN-10**    |    <audio controls="controls">  <source type="audio/wav" src="https://raw.githubusercontent.com/MMF-SASEGAN/MMF-SASEGAN.github.io/main/wavs/9_1.wav"></source> </audio>   |    <audio controls="controls">  <source type="audio/wav" src="https://raw.githubusercontent.com/MMF-SASEGAN/MMF-SASEGAN.github.io/main/wavs/9_2.wav"></source> </audio>  |
 |    **SASEGAN-11**    |    <audio controls="controls">  <source type="audio/wav" src="https://raw.githubusercontent.com/MMF-SASEGAN/MMF-SASEGAN.github.io/main/wavs/10_1.wav"></source> </audio>   |    <audio controls="controls">  <source type="audio/wav" src="https://raw.githubusercontent.com/MMF-SASEGAN/MMF-SASEGAN.github.io/main/wavs/10_2.wav"></source> </audio>  |
 |    **MMF-SASEGAN**    |    <audio controls="controls">  <source type="audio/wav" src="https://raw.githubusercontent.com/MMF-SASEGAN/MMF-SASEGAN.github.io/main/wavs/M_1.wav"></source> </audio>   |    <audio controls="controls">  <source type="audio/wav" src="https://raw.githubusercontent.com/MMF-SASEGAN/MMF-SASEGAN.github.io/main/wavs/M_2.wav"></source> </audio>  |
+
+#### Ablation study
+##### In this study,
