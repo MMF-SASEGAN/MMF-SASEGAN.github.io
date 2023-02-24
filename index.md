@@ -37,7 +37,7 @@ Since there are more and more speech-related applications and various noises exi
 |    **SASEGAN-9**   |   2.29	| 3.45	| 3.05	| 2.85	| 8.48	| 93.28    |
 |    **SASEGAN-10**   |  2.41	| 3.62	| 3.06	| 2.99	| 7.87	| 93.36    |
 |    **SASEGAN-11**   |  2.35	| 3.57	| 3.03	| 2.94	| 7.76	| 93.19    |
-|    **Model Fusion 3+4**   |   *2.54*   |  3.79   |  3.24   |  3.16   |  9.12   |   93.60  |
+|    **Model Fusion 3+4**   |   2.54   |  3.79   |  3.24   |  3.16   |  9.12   |   93.60  |
 |    **Model Fusion 3+5**   |   2.56   |  3.81   |  3.25   |  3.17   |  9.28   |   93.77  |
 |    **Model Fusion 3+6**   |   2.53   |  3.83   |  3.17   |  3.17   |  8.25   |   93.78  |
 |    **Model Fusion 3+7**   |   2.53   |  3.79   |  3.24   |  3.15   |  9.29   |   93.84  |
@@ -73,6 +73,6 @@ Since there are more and more speech-related applications and various noises exi
 |    **Model Fusion 9+10**  |   2.42   |  3.66   |  3.16   |  3.03   |  8.97   |   93.83  |
 |    **Model Fusion 9+11**  |   2.40   |  3.65   |  3.17   |  3.01   |  9.23   |   93.81  |
 |    **Model Fusion 10+11** |   2.43   |  3.67   |  3.19   |  3.04   |  9.34   |   93.76  |
-|    **Model Fusion all**   |   **2.56**   |  3.82   |  3.29   |  3.18   |  9.76   |   94.09  |
+|    **Model Fusion all**   |   **2.56**   |  **3.82**   |  **3.29**   |  **3.18**   |  **9.76**   |   **94.09**  |
 
 'SASEGAN-N' means the SASEGANs with the self-attention layer in the Nth convolutional layer. 'Model Fusion A+B' refers to the network after the fusion of SASEGAN-A and SASEGAN-B.
