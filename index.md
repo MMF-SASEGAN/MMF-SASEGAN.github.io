@@ -25,7 +25,9 @@ Since there are more and more speech-related applications and various noises exi
 
 #### Ablation study
 ##### In this study, we also investigate the performance of the speech enhancement system when only two models are fused.The specific experimental results are as follows：
+
 |       |    **PESQ**   |  **CSIG**   |  **CBAK**   |  **COVL**   |  **SSNR**   |  **STOI**   |
+|:------------:|:-------:|:-------:|:-------:|:-------:|:-------:|
 |    **SASEGAN-3**   |       |     |     |     |     |
 |    **SASEGAN-4**   |       |     |     |     |     |
 |    **SASEGAN-5**   |       |     |     |     |     |
