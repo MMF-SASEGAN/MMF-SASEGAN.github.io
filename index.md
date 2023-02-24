@@ -24,4 +24,22 @@ Since there are more and more speech-related applications and various noises exi
 |    **MMF-SASEGAN**    |    <audio controls="controls">  <source type="audio/wav" src="https://raw.githubusercontent.com/MMF-SASEGAN/MMF-SASEGAN.github.io/main/wavs/M_1.wav"></source> </audio>   |    <audio controls="controls">  <source type="audio/wav" src="https://raw.githubusercontent.com/MMF-SASEGAN/MMF-SASEGAN.github.io/main/wavs/M_2.wav"></source> </audio>  |
 
 #### Ablation study
-##### In this study,
+##### In this study, we also investigate the performance of the speech enhancement system when only two models are fused.The specific experimental results are as follows：
+|       |    **PESQ**   |  **CSIG**   |  **CBAK**   |  **COVL**   |  **SSNR**   |  **STOI**   |
+|    **SASEGAN-3**   |       |     |     |     |     |
+|    **SASEGAN-4**   |       |     |     |     |     |
+|    **SASEGAN-5**   |       |     |     |     |     |
+|    **SASEGAN-6**   |       |     |     |     |     |
+|    **SASEGAN-7**   |       |     |     |     |     |
+|    **SASEGAN-8**   |       |     |     |     |     |
+|    **SASEGAN-9**   |       |     |     |     |     |
+|    **SASEGAN-10**   |       |     |     |     |     |
+|    **SASEGAN-11**   |       |     |     |     |     |
+|    **Model Fusion 3+4**   |       |     |     |     |     |
+|    **Model Fusion 3+5**   |       |     |     |     |     |
+|    **Model Fusion 3+6**   |       |     |     |     |     |
+|    **Model Fusion 3+7**   |       |     |     |     |     |
+|    **Model Fusion 3+8**   |       |     |     |     |     |
+|    **Model Fusion 3+9**   |       |     |     |     |     |
+|    **Model Fusion 3+10**   |       |     |     |     |     |
+|    **Model Fusion 3+11**   |       |     |     |     |     |
