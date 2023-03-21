@@ -75,4 +75,4 @@ Since there are more and more speech-related applications and various noises exi
 |    **Field 10 add 11** |   2.43   |  3.67   |  3.19   |  3.04   |  9.34   |   93.76  |
 |    **Field all added**   |   **2.56**   |  **3.82**   |  **3.29**   |  **3.18**   |  **9.76**   |   **94.09**  |
 
-'SASEGAN-N' means the SASEGANs with the self-attention layer in the Nth convolutional layer. 'Model Fusion A+B' refers to the network after the fusion of SASEGAN-A and SASEGAN-B.
+'SASEGAN-N' means the SASEGANs with the self-attention layer in the Nth convolutional layer. 'Field A add B' refers to the network after the fusion of SASEGAN-A and SASEGAN-B.
