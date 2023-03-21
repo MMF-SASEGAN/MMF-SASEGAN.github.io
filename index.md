@@ -6,7 +6,7 @@ Since there are more and more speech-related applications and various noises exi
 **All utterances are partially or completely unseen during training, and the results are uncurated (NOT cherry-picked) unless otherwise specified**.
 
 #### MMF-SASEGAN Audio Samples
-##### The audio loading may be slower and you need to wait patiently. If you cannot load audio, please contact us to provide original audio files. Our mail address is 20214239031@stu.suda.edu.cn.
+##### The audio loading may be slower and you need to wait patiently. 
 
 |              | Sample 1  | Sample 2  |
 |:------------:|:-------:|:-------:|
