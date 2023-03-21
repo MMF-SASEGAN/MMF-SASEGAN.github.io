@@ -1,6 +1,6 @@
-# MMF-SASEGAN
+# MASF
 
-Since there are more and more speech-related applications and various noises exist in real life, speech enhancement plays an important role. However, speech enhancement (SE) systems, based on generative adversarial networks (GANs), are limited in improving speech quality and intelligibility. In this study, we propose a novel multi-model fusion SE system based on self-attention generative adversarial networks (MMF-SASEGAN). The models with different positions of the self-attention layers focus on different features. Considering the effect of the position of the self-attention layers on SE performance, SASEGANs with self-attention layers at different positions are fused. For speech quality, the proposed method improves by 8.22%, 8.52%, 9.28%, and 9.40% in CBAK, CSIG, COVL, and PESQ on average compared with the baseline SASEGANs. As to SSNR and STOI, compared with the baseline SASEGANs on average, the proposed method obtains absolute gains of 1.71 and 0.77, respectively. The results show that the MMF-SASEGAN comprehensively improves the performance of the baseline SASEGAN and performs better than the mainstream GAN-based SE methods. Importantly, the proposed method may generalize to other GAN-based SE methods.
+Since there are more and more speech-related applications and various noises exist in real life, speech enhancement plays an important role. However, speech enhancement (SE) systems, based on generative adversarial networks (GANs), are limited in improving speech quality and intelligibility. In this study, we propose a novel multiple self-attention field method for speech enhancement (MSAF). The models with different positions of the self-attention layers focus on different features. Considering the effect of the position of the self-attention layers on SE performance, SASEGANs with self-attention layers at different positions are fused. The output of each model is assigned a different feature weight, which is obtained by training. Then, we fuse the models according to the feature weights to obtain a clean speech signal. For speech quality, the proposed method improves by 8.22%, 8.52%, 9.28%, and 9.40% in CBAK, CSIG, COVL, and PESQ on average compared with the baseline SASEGANs. As to SSNR and STOI, compared with the baseline SASEGANs on average, the proposed method obtains absolute gains of 1.71 and 0.77, respectively. The results show that the MSAF comprehensively improves the performance of the baseline SASEGAN and performs better than the mainstream GAN-based SE methods. Importantly, the proposed method can be extended to other GAN-based SE methods.
 
 ---
 **All utterances are partially or completely unseen during training, and the results are uncurated (NOT cherry-picked) unless otherwise specified**.
@@ -21,7 +21,7 @@ Since there are more and more speech-related applications and various noises exi
 |    **SASEGAN-9**    |    <audio controls="controls">  <source type="audio/wav" src="https://raw.githubusercontent.com/MMF-SASEGAN/MMF-SASEGAN.github.io/main/wavs/8_1.wav"></source> </audio>   |    <audio controls="controls">  <source type="audio/wav" src="https://raw.githubusercontent.com/MMF-SASEGAN/MMF-SASEGAN.github.io/main/wavs/8_2.wav"></source> </audio>  |
 |    **SASEGAN-10**    |    <audio controls="controls">  <source type="audio/wav" src="https://raw.githubusercontent.com/MMF-SASEGAN/MMF-SASEGAN.github.io/main/wavs/9_1.wav"></source> </audio>   |    <audio controls="controls">  <source type="audio/wav" src="https://raw.githubusercontent.com/MMF-SASEGAN/MMF-SASEGAN.github.io/main/wavs/9_2.wav"></source> </audio>  |
 |    **SASEGAN-11**    |    <audio controls="controls">  <source type="audio/wav" src="https://raw.githubusercontent.com/MMF-SASEGAN/MMF-SASEGAN.github.io/main/wavs/10_1.wav"></source> </audio>   |    <audio controls="controls">  <source type="audio/wav" src="https://raw.githubusercontent.com/MMF-SASEGAN/MMF-SASEGAN.github.io/main/wavs/10_2.wav"></source> </audio>  |
-|    **MMF-SASEGAN**    |    <audio controls="controls">  <source type="audio/wav" src="https://raw.githubusercontent.com/MMF-SASEGAN/MMF-SASEGAN.github.io/main/wavs/M_1.wav"></source> </audio>   |    <audio controls="controls">  <source type="audio/wav" src="https://raw.githubusercontent.com/MMF-SASEGAN/MMF-SASEGAN.github.io/main/wavs/M_2.wav"></source> </audio>  |
+|       **MASF**       |    <audio controls="controls">  <source type="audio/wav" src="https://raw.githubusercontent.com/MMF-SASEGAN/MMF-SASEGAN.github.io/main/wavs/M_1.wav"></source> </audio>   |    <audio controls="controls">  <source type="audio/wav" src="https://raw.githubusercontent.com/MMF-SASEGAN/MMF-SASEGAN.github.io/main/wavs/M_2.wav"></source> </audio>  |
 
 #### Ablation study
 ##### In this study, we also investigate the performance of the speech enhancement system when only two models are fused.The specific experimental results are as follows：
@@ -37,42 +37,42 @@ Since there are more and more speech-related applications and various noises exi
 |    **SASEGAN-9**   |   2.29	| 3.45	| 3.05	| 2.85	| 8.48	| 93.28    |
 |    **SASEGAN-10**   |  2.41	| 3.62	| 3.06	| 2.99	| 7.87	| 93.36    |
 |    **SASEGAN-11**   |  2.35	| 3.57	| 3.03	| 2.94	| 7.76	| 93.19    |
-|    **Model Fusion 3+4**   |   2.54   |  3.79   |  3.24   |  3.16   |  9.12   |   93.60  |
-|    **Model Fusion 3+5**   |   2.56   |  3.81   |  3.25   |  3.17   |  9.28   |   93.77  |
-|    **Model Fusion 3+6**   |   2.53   |  3.83   |  3.17   |  3.17   |  8.25   |   93.78  |
-|    **Model Fusion 3+7**   |   2.53   |  3.79   |  3.24   |  3.15   |  9.29   |   93.84  |
-|    **Model Fusion 3+8**   |   2.50   |  3.76   |  3.24   |  3.12   |  9.48   |   93.77  |
-|    **Model Fusion 3+9**   |   2.47   |  3.66   |  3.22   |  3.06   |  9.40   |   93.86  |
-|    **Model Fusion 3+10**  |   2.51   |  3.74   |  3.24   |  3.11   |  9.43   |   93.79  |
-|    **Model Fusion 3+11**  |   2.49   |  3.72   |  3.23   |  3.10   |  9.39   |   93.75  |
-|    **Model Fusion 4+5**   |   2.54   |  3.78   |  3.26   |  3.15   |  9.43   |   93.64  |
-|    **Model Fusion 4+6**   |   2.52   |  3.82   |  3.19   |  3.17   |  8.41   |   93.67  |
-|    **Model Fusion 4+7**   |   2.52   |  3.79   |  3.24   |  3.14   |  9.36   |   93.76  |
-|    **Model Fusion 4+8**   |   2.49   |  3.76   |  3.24   |  3.12   |  9.52   |   93.71  |
-|    **Model Fusion 4+9**   |   2.46   |  3.68   |  3.21   |  3.06   |  9.45   |   93.80  |
-|    **Model Fusion 4+10**  |   2.49   |  3.73   |  3.24   |  3.10   |  9.60   |   93.71  |
-|    **Model Fusion 4+11**  |   2.47   |  3.69   |  3.23   |  3.07   |  9.48   |   93.68  |
-|    **Model Fusion 5+6**   |   2.54   |  3.84   |  3.20   |  3.18   |  8.64   |   93.81  |
-|    **Model Fusion 5+7**   |   2.54   |  3.79   |  3.25   |  3.15   |  9.54   |   93.86  |
-|    **Model Fusion 5+8**   |   2.51   |  3.77   |  3.24   |  3.13   |  9.59   |   93.81  |
-|    **Model Fusion 5+9**   |   2.47   |  3.66   |  3.22   |  3.06   |  9.52   |   93.89  |
-|    **Model Fusion 5+10**  |   2.51   |  3.74   |  3.24   |  3.12   |  9.52   |   93.80  |
-|    **Model Fusion 5+11**  |   2.49   |  3.70   |  3.24   |  3.08   |  9.64   |   93.80  |
-|    **Model Fusion 6+7**   |   2.50   |  3.79   |  3.20   |  3.14   |  8.94   |   93.84  |
-|    **Model Fusion 6+8**   |   2.48   |  3.78   |  3.21   |  3.12   |  9.22   |   93.81  |
-|    **Model Fusion 6+9**   |   2.44   |  3.71   |  3.18   |  3.07   |  9.01   |   93.88  |
-|    **Model Fusion 6+10**  |   2.48   |  3.78   |  3.21   |  3.12   |  9.16   |   93.81  |
-|    **Model Fusion 6+11**  |   2.45   |  3.73   |  3.17   |  3.08   |  8.70   |   93.77  |
-|    **Model Fusion 7+8**   |   2.47   |  3.79   |  3.19   |  3.12   |  8.91   |   93.85  |
-|    **Model Fusion 7+9**   |   2.43   |  3.73   |  3.17   |  3.07   |  8.97   |   93.90  |
-|    **Model Fusion 7+10**  |   2.47   |  3.77   |  3.20   |  3.11   |  9.13   |   93.85  |
-|    **Model Fusion 7+11**  |   2.45   |  3.71   |  3.19   |  3.07   |  9.23   |   93.81  |
-|    **Model Fusion 8+9**   |   2.42   |  3.70   |  3.15   |  3.05   |  8.80   |   93.86  |
-|    **Model Fusion 8+10**  |   2.45   |  3.73   |  3.17   |  3.08   |  8.92   |   93.79  |
-|    **Model Fusion 8+11**  |   2.43   |  3.70   |  3.19   |  3.05   |  9.26   |   93.76  |
-|    **Model Fusion 9+10**  |   2.42   |  3.66   |  3.16   |  3.03   |  8.97   |   93.83  |
-|    **Model Fusion 9+11**  |   2.40   |  3.65   |  3.17   |  3.01   |  9.23   |   93.81  |
-|    **Model Fusion 10+11** |   2.43   |  3.67   |  3.19   |  3.04   |  9.34   |   93.76  |
-|    **Model Fusion all**   |   **2.56**   |  **3.82**   |  **3.29**   |  **3.18**   |  **9.76**   |   **94.09**  |
+|    **Field 3 add 4**   |   2.54   |  3.79   |  3.24   |  3.16   |  9.12   |   93.60  |
+|    **Field 3 add 5**   |   2.56   |  3.81   |  3.25   |  3.17   |  9.28   |   93.77  |
+|    **Field 3 add 6**   |   2.53   |  3.83   |  3.17   |  3.17   |  8.25   |   93.78  |
+|    **Field 3 add 7**   |   2.53   |  3.79   |  3.24   |  3.15   |  9.29   |   93.84  |
+|    **Field 3 add 8**   |   2.50   |  3.76   |  3.24   |  3.12   |  9.48   |   93.77  |
+|    **Field 3 add 9**   |   2.47   |  3.66   |  3.22   |  3.06   |  9.40   |   93.86  |
+|    **Field 3 add 10**  |   2.51   |  3.74   |  3.24   |  3.11   |  9.43   |   93.79  |
+|    **Field 3 add 11**  |   2.49   |  3.72   |  3.23   |  3.10   |  9.39   |   93.75  |
+|    **Field 4 add 5**   |   2.54   |  3.78   |  3.26   |  3.15   |  9.43   |   93.64  |
+|    **Field 4 add 6**   |   2.52   |  3.82   |  3.19   |  3.17   |  8.41   |   93.67  |
+|    **Field 4 add 7**   |   2.52   |  3.79   |  3.24   |  3.14   |  9.36   |   93.76  |
+|    **Field 4 add 8**   |   2.49   |  3.76   |  3.24   |  3.12   |  9.52   |   93.71  |
+|    **Field 4 add 9**   |   2.46   |  3.68   |  3.21   |  3.06   |  9.45   |   93.80  |
+|    **Field 4 add 10**  |   2.49   |  3.73   |  3.24   |  3.10   |  9.60   |   93.71  |
+|    **Field 4 add 11**  |   2.47   |  3.69   |  3.23   |  3.07   |  9.48   |   93.68  |
+|    **Field 5 add 6**   |   2.54   |  3.84   |  3.20   |  3.18   |  8.64   |   93.81  |
+|    **Field 5 add 7**   |   2.54   |  3.79   |  3.25   |  3.15   |  9.54   |   93.86  |
+|    **Field 5 add 8**   |   2.51   |  3.77   |  3.24   |  3.13   |  9.59   |   93.81  |
+|    **Field 5 add 9**   |   2.47   |  3.66   |  3.22   |  3.06   |  9.52   |   93.89  |
+|    **Field 5 add 10**  |   2.51   |  3.74   |  3.24   |  3.12   |  9.52   |   93.80  |
+|    **Field 5 add 11**  |   2.49   |  3.70   |  3.24   |  3.08   |  9.64   |   93.80  |
+|    **Field 6 add 7**   |   2.50   |  3.79   |  3.20   |  3.14   |  8.94   |   93.84  |
+|    **Field 6 add 8**   |   2.48   |  3.78   |  3.21   |  3.12   |  9.22   |   93.81  |
+|    **Field 6 add 9**   |   2.44   |  3.71   |  3.18   |  3.07   |  9.01   |   93.88  |
+|    **Field 6 add 10**  |   2.48   |  3.78   |  3.21   |  3.12   |  9.16   |   93.81  |
+|    **Field 6 add 11**  |   2.45   |  3.73   |  3.17   |  3.08   |  8.70   |   93.77  |
+|    **Field 7 add 8**   |   2.47   |  3.79   |  3.19   |  3.12   |  8.91   |   93.85  |
+|    **Field 7 add 9**   |   2.43   |  3.73   |  3.17   |  3.07   |  8.97   |   93.90  |
+|    **Field 7 add 10**  |   2.47   |  3.77   |  3.20   |  3.11   |  9.13   |   93.85  |
+|    **Field 7 add 11**  |   2.45   |  3.71   |  3.19   |  3.07   |  9.23   |   93.81  |
+|    **Field 8 add 9**   |   2.42   |  3.70   |  3.15   |  3.05   |  8.80   |   93.86  |
+|    **Field 8 add 10**  |   2.45   |  3.73   |  3.17   |  3.08   |  8.92   |   93.79  |
+|    **Field 8 add 11**  |   2.43   |  3.70   |  3.19   |  3.05   |  9.26   |   93.76  |
+|    **Field 9 add 10**  |   2.42   |  3.66   |  3.16   |  3.03   |  8.97   |   93.83  |
+|    **Field 9 add 11**  |   2.40   |  3.65   |  3.17   |  3.01   |  9.23   |   93.81  |
+|    **Field 10 add 11** |   2.43   |  3.67   |  3.19   |  3.04   |  9.34   |   93.76  |
+|    **Field all added**   |   **2.56**   |  **3.82**   |  **3.29**   |  **3.18**   |  **9.76**   |   **94.09**  |
 
 'SASEGAN-N' means the SASEGANs with the self-attention layer in the Nth convolutional layer. 'Model Fusion A+B' refers to the network after the fusion of SASEGAN-A and SASEGAN-B.
